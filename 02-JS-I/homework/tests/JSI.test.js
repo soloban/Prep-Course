@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+33333333/* eslint-disable no-undef */
 const {
   nuevaString,
   nuevoNum,
@@ -35,11 +35,11 @@ const {
   esVocal,
 } = require('../homework.js');
 
-describe('nuevaString', function() {
-  it('Deberia ser un string', function() {
-    expect(typeof nuevaString).toBe('string');
+describe('nuevoString', function() {
+  it('deberia ser un string', function() {
+    expect(typeof nuevoString).toBe('string');
   });
-});
+}); 
 
 describe('nuevoNum', function() {
   it('Deberia ser un numero', function() {
