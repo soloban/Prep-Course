@@ -28,7 +28,13 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-}
+ var arreglo = []
+  for ( var i = 0 ; i < array.length; i++)
+  { arreglo.push ( array [i] + 1)
+    }
+ return arreglo
+  }
+
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -76,13 +82,13 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+ for ( let i = 0 ; i < array.length ; i ++){
+   if (array[i]=== elemento){
+    return true
+   }
+  }
+ return false ;
 
- for (let i = 0 ; i < array.lenght ; i++) {
-   if ( array[i] === elemento) return true ;
- }   
-
-
-   return false; 
 }
 
 
@@ -90,11 +96,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
- 
- for ( var i = 0 ; i < numeros.lenght ; i ++){
-  var suma = 0 ;
-  suma = suma + numeros [i] 
- } return suma
+ var suma = 0;
+ for ( var i = 0 ; i < numeros.length ; i ++){
+  suma = suma + numeros [i] ;
+ } 
+ return suma;
 }
 
 
@@ -102,10 +108,10 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
- var suma = 0
- for ( var i = 0 ; i < resultadosTest.lenght ; i ++){
-   suma += resultados [i]
- }return suma/resultadosTest.lenght
+ var suma = 0 
+ for ( var i = 0 ; i < resultadosTest.length ; i ++){
+   suma = suma + resultadosTest [i]
+ }return suma/resultadosTest.length
 }
 
 
@@ -113,14 +119,14 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-
- for ( var i = 0; i < numeros.lenght; i++ )
  var mayor = 0 
- if(numeros[i] > mayor ) {
+ for ( var i = 0; i < numeros.length; i++ ){
+  if(numeros[i] > mayor )  {
     mayor = numeros [i]
-
+  }  
   } return mayor
 }
+
 
 
 function multiplicarArgumentos() {
@@ -139,11 +145,9 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-var contador = 0
-for ( let i = 0 ; i < arreglo.lenght ; i ++ ){
-  if ( contador [i > 18]){
-    contador++
-  }
+var contador = 0;
+for ( var i = 0 ; i < arreglo.length ; i ++ ){
+  if ( arreglo [i ]> 18) contador = contador + 1;
  }return contador
 }
 
@@ -154,7 +158,7 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
   if ( numeroDeDia ===1 || numeroDeDia === 7) return 'Es fin de semana'
-  if ( numeroDeDia > 1 || numeroDeDia < 7 ) return ' Es dia Laboral'
+  if ( numeroDeDia > 1 || numeroDeDia < 7 ) return 'Es dia Laboral'
 } 
 
 
@@ -183,17 +187,17 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
- var array2 = 0
- for ( let i = 0 ; i < array.lenght ; i++ ) {
-  if (array [i] === 'Enenro' || array [i] === 'Marzo' || array [i] === 'Noviembre' ){
-     array2.push(array [i])
-    }
+ var array2 = []
+ for ( let i = 0 ; i < array.length ; i++ ) {
+  if (array [i] === 'Enero' || 
+   array [i] === 'Marzo' ||
+   array [i] === 'Noviembre' ) array2.push(array [i])
+    
  } 
- if ( array2.lenght < 3) {
-   return ' no se encontraron los meses pedidos'
- } else {
-   return array2
-  }
+ if ( array2.length !== 3) return 'No se encontraron los meses pedidos'
+ 
+ return array2
+  
 
 }
 function mayorACien(array) {
@@ -201,7 +205,7 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
  var array2 = []
-  for ( let i = 0 ; i < array.lenght ; i ++){
+  for ( let i = 0 ; i < array.length ; i ++){
     if(array[i] > 100 ){
       array2.push (array[i])
     

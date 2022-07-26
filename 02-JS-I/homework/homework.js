@@ -1,7 +1,6 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "amor";
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 4;
@@ -68,8 +67,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.lenght === str2.lenght) return true
-  return false
+  return str1.length === str2.length
 }
 
 function menosQueNoventa(num) {
@@ -156,9 +154,12 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (num > 0) return 'Es positivo'
-  if (num < 0) return ' Es negativo'
-  return false
+   if (numero > 0) {
+    return 'Es positivo'}
+   else if (numero < 0) {
+    return 'Es negativo'}
+   else {
+    return false}
 }
 
 function agregarSimboloExclamacion(str) {
@@ -222,7 +223,7 @@ function esVocal(letra){
   //Escribe tu código aquí
   if (letra.lengt > 1) return 'Dato incorrecto';
   if (letra ==='a' || letra === 'e' || letra === 'i' || letra ==='o' || letra === 'u') return 'Es vocal'
-  return ' Dato incorrecto'; 
+  return 'Dato incorrecto'; 
 }
 
 
